@@ -1,7 +1,7 @@
 import express from 'express'
 import morgan from 'morgan'
 import pkg from '../package.json'
-import { createRoles } from './libs/initialSetup'
+import {createRoles} from './libs/initialSetup'
 import productsRoutes from './routes/products.routes'
 import authRoutes from './routes/auth.routes'
 
@@ -16,7 +16,7 @@ app.set('pkg', pkg)
 
 // Middlewares
 app.use(morgan('dev'))
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 // Routes

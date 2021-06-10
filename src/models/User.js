@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import {Schema, model} from 'mongoose'
 import bcrypt from 'bcryptjs'
 
 const userSchema = new Schema({
@@ -14,11 +14,14 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    roles: [{
-        ref: 'Role',
-        type: Schema.Types.ObjectId
-    }]
-}, {
+    roles: [
+        {
+            ref: 'Role',
+            type: Schema.Types.ObjectId
+        }
+    ]
+}, 
+{
     timestamps: true,
     versionKey: false
 })
