@@ -5,7 +5,7 @@ const URI = 'mongodb://localhost/api-products-roles'
 mongoose.connect(URI, {
     useCreateIndex: true,
     useNewUrlParser: true,
-    useFindAndModify: true,
+    useFindAndModify: false,
     useUnifiedTopology: true
 })
     .then(db => console.log('DB is connected'))
